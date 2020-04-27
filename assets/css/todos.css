@@ -1,0 +1,386 @@
+:root {
+    --peach: #ED4264;  /* fallback for old browsers */
+    --peach: -webkit-linear-gradient(to right, #FFEDBC, #ED4264);  /* Chrome 10-25, Safari 5.1-6 */
+    --peach: linear-gradient(to right, #FFEDBC, #ED4264); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    
+    --megatron: #C6FFDD;  /* fallback for old browsers */
+    --megatron: -webkit-linear-gradient(to right, #f7797d, #FBD786, #C6FFDD);  /* Chrome 10-25, Safari 5.1-6 */
+    --megatron: linear-gradient(to right, #f7797d, #FBD786, #C6FFDD); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    
+    --vasily: #e9d362;  /* fallback for old browsers */
+    --vasily: -webkit-linear-gradient(to right, #333333, #e9d362);  /* Chrome 10-25, Safari 5.1-6 */
+    --vasily: linear-gradient(to right, #333333, #e9d362); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    
+    --anwar: #334d50;  /* fallback for old browsers */
+    --anwar: -webkit-linear-gradient(to right, #cbcaa5, #334d50);  /* Chrome 10-25, Safari 5.1-6 */
+    --anwar: linear-gradient(to right, #cbcaa5, #334d50); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    --sun: #fceabb;  /* fallback for old browsers */
+    --sun: -webkit-linear-gradient(to right, #f8b500, #fceabb);  /* Chrome 10-25, Safari 5.1-6 */
+    --sun: linear-gradient(to right, #f8b500, #fceabb); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    
+    --sky: #005AA7;  /* fallback for old browsers */
+    --sky: -webkit-linear-gradient(to right, #FFFDE4, #005AA7);  /* Chrome 10-25, Safari 5.1-6 */
+    --sky: linear-gradient(to right, #FFFDE4, #005AA7); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+
+body {
+    font-family: Roboto;
+    background: var(--sky);
+}
+
+#container {
+    width: 360px;
+    margin: 100px auto;
+    background : #f7f7f7;
+    box-sizing: border-box;
+    border-radius: 6px;
+    box-shadow: 0 0 3px rgba(0,0,0, 0.2);
+    z-index: 1;
+}
+
+h1.ToDo-h1 { 
+    background: #005AA7;
+    color: white;
+    margin: 0;
+    padding: 10px 20px;
+    font-size: 24px;
+    font-weight: normal;
+    text-transform: uppercase;
+}
+
+input[type="text"] {
+    font-size: 18px;
+    background-color: #f7f7f7;
+    width: 100%;
+    padding: 13px 13px 13px 20px;
+    box-sizing: border-box;
+    color: #005AA7;
+    border: 3px solid rgba(0, 0, 0, 0);
+}
+
+input[type="text"]:focus {
+    background-color: #fff;
+    border: 3px solid #005AA7;
+    outline: none;
+    }
+
+input[type="text"]:hover {
+    border: 2px solid #005AA7;
+    transition: 0.1s ease;
+    transition-property: border; 
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+li.listItem {
+    background: #fff;
+    height: 40px;
+    line-height: 40px;
+    color: #666;
+    cursor: normal;
+    
+}
+
+li:nth-child(2n) {
+    background: #0055ff04;
+}
+
+
+span {
+    background-color: #e74c3c;
+    height: 40px;
+    margin-right: 20px;
+    text-align: center;
+    color: white;
+    width: 0px;
+    display: inline-block;
+    transition: 0.2s linear;
+    opacity: 0;
+}
+
+span:hover {
+    width: 40px;
+    opacity: 1.0;
+    cursor: pointer;
+}
+
+.fa-plus-square {
+    float: right;
+    cursor: pointer;
+}
+.fa-minus {
+    float: right;
+    cursor: pointer;
+}
+
+.fadingPlus {
+    animation: appear 0.5s alternate;
+    
+}
+
+.fadingMinus {
+    animation: hideout 0.5s reverse;
+}
+
+@keyframes appear {
+    from {
+        transform: rotate(20deg);
+        opacity: 0.2;
+    }
+    25% {
+        transform: rotate(45deg);
+        opacity: 0.4;
+    }
+    50% {
+        transform: rotate(70deg);
+        opacity: 0.6;
+    }
+    75% {
+        transform: rotate(80deg);
+        opacity: 0.8;
+    }
+    to { 
+        transform: rotate(90deg);
+        opacity: 1.0;
+    }
+}
+
+@keyframes hideout {
+    from {
+        transform: rotate(20deg);
+        opacity: 1.0;
+    }
+    25% {
+        transform: rotate(28deg);
+        opacity: 0.8;
+    }
+    50% {
+        transform: rotate(57deg);
+        opacity: 0.6;
+    }
+    75% {
+        transform: rotate(74deg);
+        opacity: 0.4;
+    }
+    to { 
+        transform: rotate(90deg);
+        opacity: 0.2;
+    }
+}
+
+.done {
+    text-decoration: line-through;
+    color: gray;;
+}
+
+input[type='checkbox'] {
+    float: right;
+    margin: 12px 10px;
+    position: static;
+    cursor: pointer;
+}
+
+.fa-spin {
+    transform: rotate(360);
+}
+
+/* color list */
+img {
+    position: fixed;
+    bottom: 10px;
+    right: 2vmax;
+    bottom: 3vmin;
+    justify-content: center;
+    text-align: center;
+    width: 65px;
+    height: 45px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.rotate {
+    animation: rotate 0.8s ease-in-out forwards;
+}
+    @keyframes rotate {
+        from {
+            transform: rotate(0deg);
+        }
+
+        to {
+            transform: rotate(120deg);
+        }
+    }
+
+.rotate-reverse {
+    animation: rotate-reverse 0.8s ease-in-out forwards;
+}
+    @keyframes rotate-reverse {
+        from {
+            transform: rotate(120deg);
+        }
+        to {
+            transform: rotate(0deg);
+        }
+    }
+
+
+
+ul.colorChange {
+    display: none;
+    position: fixed;
+    right: calc(2vmax + 65px / 7);
+    bottom: calc(3vmin + 45px);
+}
+
+
+li.colorChangeItems {
+    display: block;
+    width: 35px;
+    height: 35px;
+    padding: 5px;
+    background-color: white;
+    border-radius: 50px;
+    text-align: center;
+    justify-content: center;
+    opacity: 1;
+}
+
+li.colorChangeItems:hover {
+    transform: scale3d(1.08, 1.08, 1.08);
+    transition: transform 0.17s ease-in-out;
+    cursor: pointer;
+}
+
+
+/* Fade in and out of color list */
+.fadeIn {
+    animation: fadeIn 0.8s ease forwards;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    20% {
+        opacity: 0.2;
+    }
+    40% {
+        opacity: 0.4;
+    }
+    60% {
+        opacity: 0.6;
+    }
+    80% {
+        opacity: 0.8;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+/* 
+.fadeOut {
+    animation: fadeOut 0.1s ease forwards reverse;
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 0;
+    }
+    20% {
+        opacity: 0.2;
+    }
+    40% {
+        opacity: 0.4;
+    }
+    60% {
+        opacity: 0.6;
+    }
+    80% {
+        opacity: 0.8;
+    }
+    100% {
+        opacity: 1;
+    }
+} */
+
+/* Instruction div on start */
+#instruction {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 100;
+    position: fixed;
+    box-sizing: border-box;
+    margin: 0;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+#content {
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.808);
+    top: 20%;
+    left: 20%;
+    right: 20%;
+    z-index: 100;
+    padding: 2% 4%;
+    margin: 0;
+    border-radius: 4px;
+
+}
+
+h1.instruction {
+    font-size: 30px;
+    color: black;
+    line-height: 20px;
+    position: relative;
+    top: 10px;
+    font-weight: normal;
+
+}
+
+p {
+    line-height: 2rem;
+    text-align: justify;
+}
+
+li.instructionli {
+    list-style-type: disc;
+    list-style-position: inside;
+}
+
+button {
+    padding: 8px;
+    width: 100px;
+    border-radius: 5px;
+    border: none;
+    box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.377);
+    cursor: pointer;
+    outline: 0;
+    background-color: #005AA7;
+    color: white;
+}
+
+.push {
+    animation: push 0.02s ease;
+}
+
+    @keyframes push {
+        from {
+            transform: scale3d(1, 1, 1);
+        }
+        50% {
+            transform: scale3d(0.89, 0.89, 0.89);
+        }
+        to {
+            transform: scale3d(1, 1, 1);
+        }
+    }

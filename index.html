@@ -1,0 +1,74 @@
+<!Doctype html>
+<html lang="en-US">
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Yonus Sahadat">
+    <meta name="Description" content="To Do list project- my first one.">
+    <link rel="stylesheet" href="assets/css/todos.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
+    <link rel="icon" type="image/x-icon" href="clipboard-list-solid.svg">
+    <script type="text/javascript" src="assets\js\jq\Jquery.js"></script>
+    <title>To-Do List</title>
+    </head>
+
+    <body>
+     
+        <div id="container">
+            <h1 class="ToDo-h1">To-Do List<i class="fas fa-minus"></i></h1>
+
+            <input type="text" placeholder="Add a To-Do" spellcheck="true" title="Add a To-Do with maximum of 22 characters">
+
+            <ul class="todo-List">
+            </ul>
+        </div>
+
+
+        <div id="instruction">
+            <div id="content">
+                <h1 class="instruction">Welcome to your To-Do list ...</h1>
+
+                <hr>
+
+                <p>You can find the instruction of usage below:
+                    <br>
+                    <strong>To add a task, </strong>type in your task and hit "enter" key.
+                    <br>
+                    <strong>To checkmark a task, </strong>click the checkbox on the right-end of each task.
+                    <br>
+                    <strong>To delete a task, </strong>hover your mouse to left-start of the task, then click on the recycle bin.
+                </p>
+                <p>
+                    You can also...
+                    <ul>
+                        <li class="instructionli">Click on the "-" and "+" signs on the right-end of the title to hide/show the input.</li>
+                        <li class="instructionli">And finally, use the color wheel on the bottom-right of the page to change the theme of your list!</li>
+                    </ul>
+                </p>
+
+                <button>Got it!</button>
+            </div>
+        </div>
+
+
+    <footer>
+           <img src="color-palette.svg" alt="Color Wheel" title="Color Wheel">
+                <ul class="colorChange">
+                    <li style="background: var(--sky);" class="colorChangeItems color0"></li>
+                    <li style="background: var(--peach);" class="colorChangeItems color1"></li>
+                    <li style="background: var(--megatron);" class="colorChangeItems color2"></li>
+                    <li style="background: var(--vasily);" class="colorChangeItems color3"></li>
+                    <li style="background: var(--anwar);" class="colorChangeItems color4"></li>
+                    <li style="background: var(--sun);" class="colorChangeItems color5"></li>
+
+                </ul>
+               <p style="font-size: 11px; position: absolute; top: 95vmin; left: 1vmin; color: gray;"> &copy; Yonus Sahadat - 2020</p>
+    </footer>
+        
+        <script type="text/javascript" src="assets/js/todos.js"></script>
+    </body>
+   
+
+</html>
+
