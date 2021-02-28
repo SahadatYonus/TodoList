@@ -9,3 +9,11 @@ In the bottom right corner of the page, you will see a color pallete by which yo
 ## Languages 
 Languages used for this app are HTML/CSS and JavaScript.
 
+## Challenges/What I learnt 
+1- The most important challenge I faced was making it responsive, which eventually taught me usage of vw and vh.
+
+2- Another issue was making the themes and stacking the buttons in corner of the page. I learnt about efficient use of classes.
+
+## Further Improvement 
+1- I think it would be a good idea to store the data of the user in the browser for a while or even create a sign-in form so that the the user can have access to his/her data in the future. 
+
